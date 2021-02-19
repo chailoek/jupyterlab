@@ -47,7 +47,7 @@ function fuzzySearch(source: string, query: string): IScore | null {
   let indices: number[] | null = null;
 
   // The regex for search word boundaries
-  const rgx = /\b\w/g;
+  const rgx = /[\p{L}\p{N}\p{Pd}]/gu;
 
   let continueSearch = true;
 
